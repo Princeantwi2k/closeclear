@@ -1,0 +1,184 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #e9ecef;
+    color: #343a40;
+}
+
+header {
+    text-align: center;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffd700;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #ffffff;
+}
+
+#hero {
+    background-image: url('https://source.unsplash.com/1600x900/?charity,help'); /* Example background image */
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.hero-content {
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    padding: 40px;
+    border-radius: 10px;
+}
+
+#hero h2 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #28a745;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.cta-button:hover {
+    background: #218838;
+}
+
+section {
+    padding: 40px 20px;
+    margin: 20px auto;
+    background: #ffffff;
+    border-radius: 5px;
+    max-width: 800px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: #007bff;
+}
+
+.service {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-left: 5px solid #007bff;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: #007bff;
+    color: #ffffff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Media Queries for Responsive Design */
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none; /* Hide the links by default */
+        flex-direction: column;
+        position: absolute;
+        top: 70px; /* Adjust to position below header */
+        right: 0;
+        background: #007bff;
+        width: 100%;
+        border-radius: 5px;
+        z-index: 10;
+    }
+
+    nav ul.active {
+        display: flex; /* Show links when active */
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger on small screens */
+    }
+    
+    #hero h2 {
+        font-size: 2em;
+    }
+
+    .cta-button {
+        padding: 8px 15px;
+    }
+
+    section {
+        padding: 30px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    #hero {
+        padding: 60px 10px;
+    }
+
+    #hero h2 {
+        font-size: 1.5em;
+    }
+
+    .cta-button {
+        padding: 8px 12px;
+    }
+
+    section {
+        padding: 20px 10px;
+    }
+    
+    h2 {
+        font-size: 1.5em;
+    }
+    
+    .service {
+        padding: 10px;
+    }
+}
