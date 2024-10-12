@@ -30,17 +30,105 @@ header {
     position: relative;
     max-width: 150px;
   }
-  .nav {
-    position: relative;
+  /* styles.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
     display: flex;
-  }
-  .nav li {
-    display: inline-block;
-  
-    font-weight: 500;
-  
-    margin-left: 40px;
-  }
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+}
+
+.logo{
+   width: 150px;
+}
+.navbar  {
+    color: #fff;
+    font-size: 1rem;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 1rem;
+}
+
+.nav-links a {
+    color: #080808;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+}
+
+.nav-links a:hover {
+   
+    border-radius: 5px;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    height: 3px;
+    width: 25px;
+    background-color: #161515;
+    margin: 3px 0;
+}
+/* styles.css */
+
+/* Add this section */
+.menu-toggle.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active .bar:nth-child(2) {
+    opacity: 0; /* Hide the middle bar */
+}
+
+.menu-toggle.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        background-color: #050505;
+        color: white;
+        padding: 20px 0 ;
+        width: 100%;
+        top: 60px;
+        left: 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        
+        display: flex;
+    }
+    .nav-links a {
+        color: #ffffff;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+    }
+}
+
   .link {
     color: #000000;
     text-decoration: none;
@@ -78,8 +166,8 @@ header {
     display: inline-block;
     margin-top: 20px;
     padding: 10px 20px;
-    background: #28a745;
-    color: #ffffff;
+    background: #f0ec01;
+    color: #000000;
     text-decoration: none;
     border-radius: 5px;
     transition: background 0.3s;
@@ -110,7 +198,7 @@ header {
     padding-bottom: 100px;
 }
 .card-img-top{
-    height: 200px;
+    height: 300px;
     width: 400px;
 }
 
@@ -121,9 +209,6 @@ header {
  
 }
 
-.card{
-    border: none !important;
-}
 
 .donate{
     display: flex;
@@ -214,6 +299,68 @@ footer {
     width: 100%;
 }
 
-@media ma {
+@media (max-width: 768px) {
+    .nav {
+        display: none; /* Hide nav on small screens */
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    .toggle {
+        display: block; /* Show toggle on small screens */
+    }
+
+    .nav.active {
+        display: flex; /* Show nav when active */
+    }
+  .card{
+    margin: 0 auto 20px auto;
     
+  }
+    #about-card , .donate1, .donate{
+        display:block;
+       
+       
+       
+        margin: 0 auto; 
+        gap: 20px;
+
+        padding: 50px;
+    }
+    .donate-context, .donate-image,.donate-context1,.donate-image1 {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    #about-card , .donate1, .donate{
+        display:block;
+       
+       
+       
+        margin: 0 auto; 
+        gap: 20px;
+
+        padding: 20px;
+    }
+    .donate-context > h2{
+        font-size: 30px;
+        font-weight: 900;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        padding-bottom: 30px;
+    }
+    .donate-context1 > h2{
+        font-size: 30px;
+        font-weight: 900;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        padding-bottom: 10px;
+    }
+
+    header {
+        width: 100%;
+        padding: 5px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #ffffff;
+      }
 }
