@@ -11,6 +11,40 @@ body {
     color: #343a40;
 }
 
+
+.container-fluid{
+    display: flex;
+    justify-content: space-between;
+}
+
+header {
+
+    width: 100%;
+    padding: 5px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+  }
+  .logo {
+    position: relative;
+    max-width: 150px;
+  }
+  .nav {
+    position: relative;
+    display: flex;
+  }
+  .nav li {
+    display: inline-block;
+  
+    font-weight: 500;
+  
+    margin-left: 40px;
+  }
+  .link {
+    color: #000000;
+    text-decoration: none;
+  }
 .hero {
     background-image: url('image/TRACTORS-FOR-AFRICA-FOUNDATION-.jpg'); /* Example background image */
     background-size: cover;
@@ -36,6 +70,7 @@ body {
 
 .hero h2 {
     margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 2.5em;
 }
 
@@ -65,14 +100,120 @@ body {
 
 
 }
+
 #about-card{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
     gap: 20px;
-    padding-bottom: 50px;
+    padding-bottom: 100px;
 }
 .card-img-top{
     height: 200px;
+    width: 400px;
+}
+
+.card-title{
+    font-size: 30px;
+    font-weight: 900;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+ 
+}
+
+.card{
+    border: none !important;
+}
+
+.donate{
+    display: flex;
+    flex-direction: row;
+   
+}
+.donate1{
+    display: flex;
+    flex-direction: row;
+   
+}
+
+.donate-image{
+    width: 50%;
+}
+.donate-image1{
+    width: 50%;
+}
+
+.donate-context > h2{
+    font-size: 50px;
+    font-weight: 900;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding-bottom: 30px;
+}
+.donate-context1 > h2{
+    font-size: 50px;
+    font-weight: 900;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding-bottom: 10px;
+}
+
+.donate-context >h5{
+    font-size: 16px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 15px 0px;
+}
+.donate-context1 >h5{
+    font-size: 24px;
+    font-weight: 800;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 0px 0px;
+}
+.donate-context{
+    width: 50%;
+    padding: 50px ;
+    background-color: #f1f1f1;
+}
+.donate-context1{
+    width: 50%;
+    padding: 50px ;
+    background-color: #f1f1f1;
+}
+.dimage2{
+    width: 100%;
+}
+.donate-buttom{
+
+    background-color: #f1e203;
+}
+.contact{
+    display: flex;
+    flex-direction: column;
+   
+    align-items: center;
+    justify-content: center;
+}
+.contactinfo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:20px;
+}
+.form{
+background-color: #f1e203;
+width: 400px;
+}
+.form-info{
+    background-color: #f1e203; 
+}
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: #080808;
+    color: #ffffff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+@media ma {
+    
 }
